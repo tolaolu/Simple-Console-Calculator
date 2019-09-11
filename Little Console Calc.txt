@@ -1,0 +1,238 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+
+        public static void adder()
+        {
+
+            int num1 = 0;
+            int num2 = 0;
+
+            Console.WriteLine("Welcome to where to add!");
+            Console.WriteLine("Enter firstnumber to add:");
+            var input = (Console.ReadLine());
+            if (!input.Equals("0") && (!input.Equals("1"))
+                && (!input.Equals("2")) && (!input.Equals("3"))
+                && (!input.Equals("4")) && (!input.Equals("5"))
+                && (!input.Equals("6")) && (!input.Equals("7"))
+                && (!input.Equals("8")) && (!input.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+                
+            }
+            else {
+                num1 = Convert.ToInt32(input);
+                
+            }
+            
+           
+
+            Console.WriteLine("Enter second number to add:");
+
+            var input2 = Console.ReadLine();
+            if (!input2.Equals("0") && (!input2.Equals("1"))
+                && (!input2.Equals("2")) && (!input2.Equals("3"))
+                && (!input2.Equals("4")) && (!input2.Equals("5"))
+                && (!input2.Equals("6")) && (!input2.Equals("7"))
+                && (!input2.Equals("8")) && (!input2.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+                Console.WriteLine("Enter secondnumber to add:");
+            }
+            else
+            {
+                num2 = Convert.ToInt32(input2);
+
+            }
+
+            var ans = num1 + num2;
+
+            Console.WriteLine("The sum of both numbers you entered is: " + ans);
+            restarter();
+        }
+        public static void subber()
+        {
+
+            int num1 = 0;
+            int num2 = 0;
+
+            Console.WriteLine("Welcome to where to subract!");
+            Console.WriteLine("Enter firstnumber to subract from:");
+            var input = (Console.ReadLine());
+            if (!input.Equals("0") && (!input.Equals("1"))
+                && (!input.Equals("2")) && (!input.Equals("3"))
+                && (!input.Equals("4")) && (!input.Equals("5"))
+                && (!input.Equals("6")) && (!input.Equals("7"))
+                && (!input.Equals("8")) && (!input.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+
+            }
+            else
+            {
+                num1 = Convert.ToInt32(input);
+
+            }
+
+
+
+            Console.WriteLine("Enter second number:");
+
+            var input2 = Console.ReadLine();
+            if (!input2.Equals("0") && (!input2.Equals("1"))
+                && (!input2.Equals("2")) && (!input2.Equals("3"))
+                && (!input2.Equals("4")) && (!input2.Equals("5"))
+                && (!input2.Equals("6")) && (!input2.Equals("7"))
+                && (!input2.Equals("8")) && (!input2.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+               
+            }
+            else
+            {
+                num2 = Convert.ToInt32(input2);
+
+            }
+
+            var ans = num1 - num2;
+
+            Console.WriteLine("The answer of both numbers you entered is: " + ans);
+            restarter();
+        }
+
+        public static void timeser()
+        {
+
+            int num1 = 0;
+            int num2 = 0;
+
+            Console.WriteLine("Welcome to where to add!");
+            Console.WriteLine("Enter firstnumber to multiply:");
+            var input = (Console.ReadLine());
+            if (!input.Equals("0") && (!input.Equals("1"))
+                && (!input.Equals("2")) && (!input.Equals("3"))
+                && (!input.Equals("4")) && (!input.Equals("5"))
+                && (!input.Equals("6")) && (!input.Equals("7"))
+                && (!input.Equals("8")) && (!input.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+
+            }
+            else
+            {
+                num1 = Convert.ToInt32(input);
+
+            }
+
+
+
+            Console.WriteLine("Enter second number to multiply:");
+
+            var input2 = Console.ReadLine();
+            if (!input2.Equals("0") && (!input2.Equals("1"))
+                && (!input2.Equals("2")) && (!input2.Equals("3"))
+                && (!input2.Equals("4")) && (!input2.Equals("5"))
+                && (!input2.Equals("6")) && (!input2.Equals("7"))
+                && (!input2.Equals("8")) && (!input2.Equals("9")))
+            {
+
+                Console.WriteLine("Invalid input. Kindly enter an integer value");
+                Console.WriteLine("Enter secondnumber to add:");
+            }
+            else
+            {
+                num2 = Convert.ToInt32(input2);
+
+            }
+
+            var ans = num1 * num2;
+
+            Console.WriteLine("The answer is: " + ans);
+            restarter();
+        }
+
+        public static void restarter()
+        {
+            Console.WriteLine("What else would you like to do?");
+
+            Console.WriteLine("Press A to Add\nPress B to Subract" +
+                "\nPress C to Multiply\nE to Exit the program");
+            string input = Console.ReadLine();
+
+            if (input.Equals("a", StringComparison.CurrentCultureIgnoreCase))
+            {
+                adder();
+
+            }
+            if (input.Equals("b", StringComparison.CurrentCultureIgnoreCase))
+            {
+                subber();
+            }
+            if (input.Equals("c", StringComparison.CurrentCultureIgnoreCase))
+            {
+                timeser();
+            }
+
+            if (input.Equals("e", StringComparison.CurrentCultureIgnoreCase))
+            {
+                Environment.Exit(0);
+
+            }
+
+            else
+            {
+
+                Console.WriteLine("Invalid input. Please press A, B, C." +
+                    "\nOr press E to exit the program");
+                Console.ReadLine();
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello Visitor!");
+            Console.WriteLine("What would you like to do?");
+
+            Console.WriteLine("Press A to Add\nPress B to Subract\nPress C to Multiply");
+            string input = Console.ReadLine();
+
+            if (!input.Equals("a", StringComparison.CurrentCultureIgnoreCase) &&
+                (!input.Equals("b", StringComparison.CurrentCultureIgnoreCase))
+                && (!input.Equals("c", StringComparison.CurrentCultureIgnoreCase)))
+            {
+                Console.WriteLine("Invalid Input. Kindly Enter A, B or C to use the program.");
+                restarter();
+                Console.ReadLine();
+            }
+            else {
+
+                if (input.Equals("a", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    adder();
+
+                }
+                if (input.Equals("b", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    subber();
+                }
+                if (input.Equals("c", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    timeser();
+
+
+                }
+
+            }
+        }
+
+    }
+}
